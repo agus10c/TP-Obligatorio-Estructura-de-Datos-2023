@@ -1,0 +1,11 @@
+[2026-06-01T23:26:58.658528700] 
+ ===== ESTADO DEL SISTEMA ===== 
+
+ ---- HASHMAP CLIENTES ---- 
+
+ ---- ARBOL AVL CIUDADES ---- 
+
+ ---- GRAFO DE RUTAS ---- 
+
+---- Solicitudes ---- 
+
