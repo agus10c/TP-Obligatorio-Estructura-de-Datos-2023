@@ -1,11 +1,238 @@
-[2026-06-01T23:26:58.658528700] 
+[2026-06-08T05:21:21.530584600] Se realizo carga del archivo carga.txt. Se cargaron: 30 Ciudades, 20 Solicitudes, 40 Rutas, 20 Clientes.
+[2026-06-08T05:21:21.558999] 
  ===== ESTADO DEL SISTEMA ===== 
 
  ---- HASHMAP CLIENTES ---- 
+[ID: Tipo de documento: DNI, Numero de documento: 34111111 -> Tipo de documento: DNI, Numero de documento: 34111111 / NAVARRO PABLO / Num de Telefono: 2994000019 / Email: navarro@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 34777777 -> Tipo de documento: DNI, Numero de documento: 34777777 / DOMINGUEZ ROSA / Num de Telefono: 2994000020 / Email: dominguez@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 31555777 -> Tipo de documento: DNI, Numero de documento: 31555777 / RUIZ JORGE / Num de Telefono: 2994000013 / Email: ruiz@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 30999000 -> Tipo de documento: DNI, Numero de documento: 30999000 / RAMIREZ LUCAS / Num de Telefono: 2994000009 / Email: ramirez@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 31444666 -> Tipo de documento: DNI, Numero de documento: 31444666 / ACOSTA PAULA / Num de Telefono: 2994000012 / Email: acosta@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 30555666 -> Tipo de documento: DNI, Numero de documento: 30555666 / MARTINEZ LAURA / Num de Telefono: 2994000005 / Email: ,martinez@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 30333444 -> Tipo de documento: DNI, Numero de documento: 30333444 / LOPEZ MARIA / Num de Telefono: 2994000003 / Email: maria@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 31666888 -> Tipo de documento: DNI, Numero de documento: 31666888 / MOLINA CARLA / Num de Telefono: 2994000014 / Email: molina@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 32000000 -> Tipo de documento: DNI, Numero de documento: 32000000 / SILVA LUCIA / Num de Telefono: 2994000016 / Email: silva@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 31333555 -> Tipo de documento: DNI, Numero de documento: 31333555 / FLORES MIGUEL / Num de Telefono: 2994000011 / Email: flores@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 32000001 -> Tipo de documento: DNI, Numero de documento: 32000001 / CASTRO HUGO / Num de Telefono: 2994000017 / Email: castro@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 33333333 -> Tipo de documento: DNI, Numero de documento: 33333333 / VEGA ELENA / Num de Telefono: 2994000018 / Email: vega@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 30666777 -> Tipo de documento: DNI, Numero de documento: 30666777 / FERNANDEZ PEDRO / Num de Telefono: 2994000006 / Email: fernandez@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 30222333 -> Tipo de documento: DNI, Numero de documento: 30222333 / PEREZ ANA / Num de Telefono: 2994000002 / Email: perez@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 31222444 -> Tipo de documento: DNI, Numero de documento: 31222444 / TORRES VALERIA / Num de Telefono: 2994000010 / Email: torres@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 30111222 -> Tipo de documento: DNI, Numero de documento: 30111222 / GOMEZ CARLOS / Num de Telefono: 2994000001 / Email: gomez@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 31777999 -> Tipo de documento: DNI, Numero de documento: 31777999 / ORTIZ SERGIO / Num de Telefono: 2994000015 / Email: ortiz@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 30777888 -> Tipo de documento: DNI, Numero de documento: 30777888 / GARCIA SOFIA / Num de Telefono: 2994000007 / Email: garcia@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 30444555 -> Tipo de documento: DNI, Numero de documento: 30444555 / RODRIGUEZ JUAN / Num de Telefono: 2994000004 / Email: rodriguez@gmailcom ] 
+[ID: Tipo de documento: DNI, Numero de documento: 30888999 -> Tipo de documento: DNI, Numero de documento: 30888999 / SANCHEZ DIEGO / Num de Telefono: 2994000008 / Email: sanchez@gmailcom ] 
 
  ---- ARBOL AVL CIUDADES ---- 
+Nodo: 4700 (Altura: 5)
+  HI: 3300
+  HD: 5500
+
+Nodo: 3300 (Altura: 4)
+  HI: 2000
+  HD: 3600
+
+Nodo: 2000 (Altura: 2)
+  HI: 1900
+  HD: 3000
+
+Nodo: 1900 (Altura: 1)
+  HI: 1000
+  HD: -
+
+Nodo: 1000 (Altura: 0)
+  HI: -
+  HD: -
+
+Nodo: 3000 (Altura: 1)
+  HI: -
+  HD: 3100
+
+Nodo: 3100 (Altura: 0)
+  HI: -
+  HD: -
+
+Nodo: 3600 (Altura: 3)
+  HI: 3500
+  HD: 4400
+
+Nodo: 3500 (Altura: 1)
+  HI: 3400
+  HD: -
+
+Nodo: 3400 (Altura: 0)
+  HI: -
+  HD: -
+
+Nodo: 4400 (Altura: 2)
+  HI: 4000
+  HD: 4600
+
+Nodo: 4000 (Altura: 1)
+  HI: -
+  HD: 4200
+
+Nodo: 4200 (Altura: 0)
+  HI: -
+  HD: -
+
+Nodo: 4600 (Altura: 0)
+  HI: -
+  HD: -
+
+Nodo: 5500 (Altura: 4)
+  HI: 5152
+  HD: 8322
+
+Nodo: 5152 (Altura: 2)
+  HI: 5000
+  HD: 5300
+
+Nodo: 5000 (Altura: 0)
+  HI: -
+  HD: -
+
+Nodo: 5300 (Altura: 1)
+  HI: -
+  HD: 5400
+
+Nodo: 5400 (Altura: 0)
+  HI: -
+  HD: -
+
+Nodo: 8322 (Altura: 3)
+  HI: 6300
+  HD: 8332
+
+Nodo: 6300 (Altura: 2)
+  HI: 5800
+  HD: 8300
+
+Nodo: 5800 (Altura: 1)
+  HI: 5700
+  HD: 6000
+
+Nodo: 5700 (Altura: 0)
+  HI: -
+  HD: -
+
+Nodo: 6000 (Altura: 0)
+  HI: -
+  HD: -
+
+Nodo: 8300 (Altura: 1)
+  HI: 7000
+  HD: -
+
+Nodo: 7000 (Altura: 0)
+  HI: -
+  HD: -
+
+Nodo: 8332 (Altura: 2)
+  HI: 8324
+  HD: 9000
+
+Nodo: 8324 (Altura: 0)
+  HI: -
+  HD: -
+
+Nodo: 9000 (Altura: 1)
+  HI: -
+  HD: 9400
+
+Nodo: 9400 (Altura: 0)
+  HI: -
+  HD: -
+
 
  ---- GRAFO DE RUTAS ---- 
+Vertice: 9400 -> [9000 (Etiqueta: 800.0)] [6300 (Etiqueta: 1500.0)] 
+Vertice: 7000 -> [1900 (Etiqueta: 350.0)] [6000 (Etiqueta: 200.0)] 
+Vertice: 6000 -> [1000 (Etiqueta: 250.0)] [7000 (Etiqueta: 200.0)] 
+Vertice: 5800 -> [5152 (Etiqueta: 220.0)] [5500 (Etiqueta: 500.0)] [5700 (Etiqueta: 140.0)] 
+Vertice: 5700 -> [5400 (Etiqueta: 130.0)] [5800 (Etiqueta: 140.0)] 
+Vertice: 5400 -> [5500 (Etiqueta: 170.0)] [5700 (Etiqueta: 130.0)] 
+Vertice: 4200 -> [4000 (Etiqueta: 150.0)] [4400 (Etiqueta: 200.0)] [5300 (Etiqueta: 450.0)] 
+Vertice: 4000 -> [2000 (Etiqueta: 300.0)] [3100 (Etiqueta: 300.0)] [4200 (Etiqueta: 150.0)] 
+Vertice: 3100 -> [3000 (Etiqueta: 50.0)] [4000 (Etiqueta: 300.0)] 
+Vertice: 3000 -> [1000 (Etiqueta: 480.0)] [2000 (Etiqueta: 170.0)] [3100 (Etiqueta: 50.0)] [3400 (Etiqueta: 500.0)] [6300 (Etiqueta: 700.0)] 
+Vertice: 2000 -> [1000 (Etiqueta: 60.0)] [1900 (Etiqueta: 320.0)] [4000 (Etiqueta: 300.0)] [3000 (Etiqueta: 170.0)] 
+Vertice: 6300 -> [3000 (Etiqueta: 700.0)] [5000 (Etiqueta: 600.0)] [9000 (Etiqueta: 1200.0)] [9400 (Etiqueta: 1500.0)] 
+Vertice: 4400 -> [4200 (Etiqueta: 200.0)] [4600 (Etiqueta: 350.0)] 
+Vertice: 8324 -> [5000 (Etiqueta: 1110.0)] [8300 (Etiqueta: 12.0)] [8332 (Etiqueta: 20.0)] 
+Vertice: 8332 -> [8322 (Etiqueta: 10.0)] [8324 (Etiqueta: 20.0)] 
+Vertice: 8322 -> [8300 (Etiqueta: 15.0)] [8332 (Etiqueta: 10.0)] 
+Vertice: 8300 -> [5000 (Etiqueta: 1100.0)] [8322 (Etiqueta: 15.0)] [8324 (Etiqueta: 12.0)] 
+Vertice: 3300 -> [3500 (Etiqueta: 400.0)] [3400 (Etiqueta: 300.0)] 
+Vertice: 5500 -> [5300 (Etiqueta: 300.0)] [5400 (Etiqueta: 170.0)] [5000 (Etiqueta: 650.0)] [5800 (Etiqueta: 500.0)] 
+Vertice: 5300 -> [4700 (Etiqueta: 280.0)] [4200 (Etiqueta: 450.0)] [5500 (Etiqueta: 300.0)] 
+Vertice: 3600 -> [3500 (Etiqueta: 250.0)] [4600 (Etiqueta: 300.0)] 
+Vertice: 4600 -> [3600 (Etiqueta: 300.0)] [4400 (Etiqueta: 350.0)] [4700 (Etiqueta: 320.0)] 
+Vertice: 3400 -> [3000 (Etiqueta: 500.0)] [3300 (Etiqueta: 300.0)] 
+Vertice: 5152 -> [5000 (Etiqueta: 35.0)] [5800 (Etiqueta: 220.0)] 
+Vertice: 5000 -> [5152 (Etiqueta: 35.0)] [8300 (Etiqueta: 1100.0)] [8324 (Etiqueta: 1110.0)] [5500 (Etiqueta: 650.0)] [6300 (Etiqueta: 600.0)] 
+Vertice: 9000 -> [6300 (Etiqueta: 1200.0)] [9400 (Etiqueta: 800.0)] 
+Vertice: 3500 -> [3300 (Etiqueta: 400.0)] [3600 (Etiqueta: 250.0)] 
+Vertice: 4700 -> [4600 (Etiqueta: 320.0)] [5300 (Etiqueta: 280.0)] 
+Vertice: 1900 -> [2000 (Etiqueta: 320.0)] [7000 (Etiqueta: 350.0)] 
+Vertice: 1000 -> [2000 (Etiqueta: 60.0)] [3000 (Etiqueta: 480.0)] [6000 (Etiqueta: 250.0)] 
 
 ---- Solicitudes ---- 
+Ciudad de origen-destino: 5800-5700
+  Solicitud Numero 9: CO: 5800 |retiro: LAPRIDA 50 -> CD: 5700 |entrega: INDEPENDENCIA 600 | Cliente: Tipo de documento: DNI, Numero de documento: 30666777 | Fecha: 15/06/2025 | m3: 9 | Bultos: 6 | Pago: true
+
+Ciudad de origen-destino: 6300-3000
+  Solicitud Numero 14: CO: 6300 |retiro: RIVADAVIA 200 -> CD: 3000 |entrega: LANIN 150 | Cliente: Tipo de documento: DNI, Numero de documento: 31333555 | Fecha: 20/06/2025 | m3: 13 | Bultos: 9 | Pago: false
+
+Ciudad de origen-destino: 6300-5000
+  Solicitud Numero 13: CO: 6300 |retiro: BELGRANO 100 -> CD: 5000 |entrega: SAN JUAN 500 | Cliente: Tipo de documento: DNI, Numero de documento: 31333555 | Fecha: 19/06/2025 | m3: 25 | Bultos: 20 | Pago: true
+
+Ciudad de origen-destino: 5000-8300
+  Solicitud Numero 4: CO: 5000 |retiro: AV. COLON 123 -> CD: 8300 |entrega: AV. ARGENTINA 456 | Cliente: Tipo de documento: DNI, Numero de documento: 30111222 | Fecha: 10/06/2025 | m3: 12 | Bultos: 8 | Pago: true
+
+Ciudad de origen-destino: 5700-5400
+  Solicitud Numero 10: CO: 5700 |retiro: ITALIA 200 -> CD: 5400 |entrega: ESPANA 100 | Cliente: Tipo de documento: DNI, Numero de documento: 30777888 | Fecha: 16/06/2025 | m3: 7 | Bultos: 3 | Pago: true
+
+Ciudad de origen-destino: 3400-3300
+  Solicitud Numero 18: CO: 3400 |retiro: BROWN 80 -> CD: 3300 |entrega: MITRE 60 | Cliente: Tipo de documento: DNI, Numero de documento: 31444666 | Fecha: 27/06/2025 | m3: 7 | Bultos: 4 | Pago: true
+
+Ciudad de origen-destino: 3000-3300
+  Solicitud Numero 3: CO: 3000 |retiro: ROCA 90 -> CD: 3300 |entrega: MITRE 80 | Cliente: Tipo de documento: DNI, Numero de documento: 31333555 | Fecha: 21/06/2025 | m3: 6 | Bultos: 2 | Pago: true
+
+Ciudad de origen-destino: 6000-1000
+  Solicitud Numero 17: CO: 6000 |retiro: ROCA 250 -> CD: 1000 |entrega: BELGRANO 90 | Cliente: Tipo de documento: DNI, Numero de documento: 31555777 | Fecha: 26/06/2025 | m3: 19 | Bultos: 13 | Pago: true
+
+Ciudad de origen-destino: 1900-7000
+  Solicitud Numero 15: CO: 1900 |retiro: SARMIENTO 400 -> CD: 7000 |entrega: YRIGOYEN 350 | Cliente: Tipo de documento: DNI, Numero de documento: 30999000 | Fecha: 24/06/2025 | m3: 16 | Bultos: 11 | Pago: true
+
+Ciudad de origen-destino: 3500-3600
+  Solicitud Numero 20: CO: 3500 |retiro: LAPRIDA 150 -> CD: 3600 |entrega: RIVADAVIA 210 | Cliente: Tipo de documento: DNI, Numero de documento: 30888999 | Fecha: 29/06/2025 | m3: 5 | Bultos: 3 | Pago: true
+
+Ciudad de origen-destino: 5500-5000
+  Solicitud Numero 12: CO: 5500 |retiro: PELLEGRINI 300 -> CD: 5000 |entrega: SANTA FE 120 | Cliente: Tipo de documento: DNI, Numero de documento: 30999000 | Fecha: 18/06/2025 | m3: 11 | Bultos: 7 | Pago: true
+
+Ciudad de origen-destino: 1000-2000
+  Solicitud Numero 1: CO: 1000 |retiro: LAS HERAS 60 -> CD: 2000 |entrega: CHILE 70 | Cliente: Tipo de documento: DNI, Numero de documento: 32000001 | Fecha: 23/06/2025 | m3: 4 | Bultos: 1 | Pago: true
+
+Ciudad de origen-destino: 5152-5800
+  Solicitud Numero 8: CO: 5152 |retiro: BROWN 90 -> CD: 5800 |entrega: ALBERDI 400 | Cliente: Tipo de documento: DNI, Numero de documento: 30555666 | Fecha: 14/06/2025 | m3: 5 | Bultos: 4 | Pago: false
+
+Ciudad de origen-destino: 2000-3000
+  Solicitud Numero 2: CO: 2000 |retiro: ALVEAR 500 -> CD: 3000 |entrega: LAVALLE 250 | Cliente: Tipo de documento: DNI, Numero de documento: 32000000 | Fecha: 22/06/2025 | m3: 10 | Bultos: 8 | Pago: false
+
+Ciudad de origen-destino: 5400-5500
+  Solicitud Numero 11: CO: 5400 |retiro: MENDOZA 50 -> CD: 5500 |entrega: CORDOBA 90 | Cliente: Tipo de documento: DNI, Numero de documento: 30888999 | Fecha: 17/06/2025 | m3: 18 | Bultos: 15 | Pago: false
+
+Ciudad de origen-destino: 8300-8324
+  Solicitud Numero 5: CO: 8300 |retiro: SAN MARTIN 100 -> CD: 8324 |entrega: ROCA 200 | Cliente: Tipo de documento: DNI, Numero de documento: 30222333 | Fecha: 11/06/2025 | m3: 8 | Bultos: 5 | Pago: false
+  Solicitud Numero 6: CO: 8300 |retiro: AV ARGENTINA 50 -> CD: 8324 |entrega: LA PAMPA 300 | Cliente: Tipo de documento: DNI, Numero de documento: 30333444 | Fecha: 12/06/2025 | m3: 15 | Bultos: 10 | Pago: true
+  Solicitud Numero 7: CO: 8300 |retiro: MITRE 700 -> CD: 8324 |entrega: 25 DE MAYO 120 | Cliente: Tipo de documento: DNI, Numero de documento: 30444555 | Fecha: 13/06/2025 | m3: 20 | Bultos: 12 | Pago: true
+
+Ciudad de origen-destino: 7000-6000
+  Solicitud Numero 16: CO: 7000 |retiro: INDEPENDENCIA 100 -> CD: 6000 |entrega: SAN MARTIN 700 | Cliente: Tipo de documento: DNI, Numero de documento: 31666888 | Fecha: 25/06/2025 | m3: 14 | Bultos: 8 | Pago: false
+
+Ciudad de origen-destino: 3300-3500
+  Solicitud Numero 19: CO: 3300 |retiro: ITALIA 40 -> CD: 3500 |entrega: COLON 50 | Cliente: Tipo de documento: DNI, Numero de documento: 30888999 | Fecha: 28/06/2025 | m3: 12 | Bultos: 7 | Pago: false
+
 

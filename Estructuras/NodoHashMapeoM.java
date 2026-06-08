@@ -3,6 +3,7 @@ package Estructuras;
 
 
 public class NodoHashMapeoM {
+    
     private Object dominio;
     private Lista rango;
     private NodoHashMapeoM enlace;
@@ -36,6 +37,5 @@ public class NodoHashMapeoM {
     public void setEnlace(NodoHashMapeoM en) {
         this.enlace = en;
     }     
-    
-    
+      
 }

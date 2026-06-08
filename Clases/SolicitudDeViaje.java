@@ -8,13 +8,13 @@ public class SolicitudDeViaje {
     private int ciudadDestino;
     private String fecha;
     private IDCliente id;
-    private double metrosCubicos;
+    private int metrosCubicos;
     private int cantBultos;
     private String domicilioRetiro;
     private String domicilioEntrega;
     private boolean estaPago;
 
-    public SolicitudDeViaje(int cs, int cd, String fe, IDCliente id, double mc, int cb, String dr, String de, boolean pago) {
+    public SolicitudDeViaje(int cs, int cd, String fe, IDCliente id, int mc, int cb, String dr, String de, boolean pago) {
         this.numeroDeSolicitud = contador;
         this.contador++;
         this.ciudadOrigen = cs;
@@ -48,7 +48,7 @@ public class SolicitudDeViaje {
         return id;
     }
 
-    public double getMetrosCubicos() {
+    public int getMetrosCubicos() {
         return metrosCubicos;
     }
 
@@ -76,7 +76,7 @@ public class SolicitudDeViaje {
         this.id = id;
     }
 
-    public void setMetrosCubicos(double mtsCub) {
+    public void setMetrosCubicos(int mtsCub) {
         this.metrosCubicos = mtsCub;
     }
 
@@ -95,7 +95,8 @@ public class SolicitudDeViaje {
     public void setEstaPago(boolean p) {
         this.estaPago = p;
     }
-
+        
+           
     @Override
     public String toString() {
         return "Solicitud Numero " + this.numeroDeSolicitud + ": "

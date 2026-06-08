@@ -37,23 +37,35 @@ public class NodoAVLDicc {
     }
 
     public void recalcularAltura(){
+        //recalcula la altura del nodo
         if (this.izquierdo != null && this.derecho != null) {
+            
             if (this.izquierdo.getAltura() >= this.derecho.getAltura()){
                 this.altura = this.izquierdo.getAltura()+1;
+                
             } else {
+                
                 this.altura = this.derecho.getAltura()+1;
+                
             }
+            
         } else {
+            
             if (this.izquierdo != null) {
+                
                 this.altura = this.izquierdo.getAltura()+1;
             } else {
+                
                 if (this.derecho != null){
                     this.altura = this.derecho.getAltura()+1;
                 } else {
                     this.altura = 0;
                 }
+                
             }
+            
         }
+        
     }
 
     public NodoAVLDicc getIzquierdo() {
@@ -79,4 +91,5 @@ public class NodoAVLDicc {
     public boolean equalsEnlaceDer(NodoAVLDicc enlaceDer){
         return this.derecho == enlaceDer;
     }
+    
 }

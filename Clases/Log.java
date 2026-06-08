@@ -7,30 +7,43 @@ import java.time.LocalDateTime;
 
 public class Log {
 
-    private static String file;
     private static PrintWriter pw = null;
 
     public static void inicializar(String rutaArchivo) {
+        
+        //Verifico que el printWriter sea nulo para no abrir otro nuevamente
         if (pw == null) {
-            file = rutaArchivo;
+
             try {
-                pw = new PrintWriter(new FileWriter(file));
+                //FileWriter abre el archivo Log para poder escribir en el
+                //PrintWriter para poder utilizar metodos para escribir sobre el archivo(Ej: printlns)
+                pw = new PrintWriter(new FileWriter(rutaArchivo));
+                
             } catch (IOException ex) {
-                System.out.println("Error al intentar abrir el archivo log: "+ex.getMessage());
-            }         
+                System.out.println("Error al intentar abrir el archivo log: " + ex.getMessage());
+            }
+
         }
+
     }
 
     public static void escribir(String mensaje) {
+        //Este metdoo escribe el mensaje recibido por parametro en el archivo 
+        
         if (pw != null) {
             pw.println("[" + LocalDateTime.now() + "] " + mensaje);
-            pw.flush(); // Vacía el buffer si el programa finaliza inesperadamente antes de cerrar el archivo
+            pw.flush();
         }
+        
     }
 
     public static void cerrar() {
+        //Cierra el printWriter
+        
         if (pw != null) {
             pw.close();
         }
+        
     }
+    
 }
