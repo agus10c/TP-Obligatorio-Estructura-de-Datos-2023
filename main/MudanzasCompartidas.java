@@ -1255,7 +1255,7 @@ public class MudanzasCompartidas {
         cantKM = lectura.nextDouble();
         lectura.nextLine();
 
-        if (cantKM < rutas.recorridoMin(cOrigen, cDestino)) {
+        if (rutas.verificarCaminoConDistanciaMenorA(cOrigen, cDestino, cantKM)) {
             System.out.println("Si existe un camino en el cual se recorre como maximo " + cantKM + " km");
         } else {
             System.out.println("No existe ningun camino en el cual se recorre como maximo " + cantKM + " km");

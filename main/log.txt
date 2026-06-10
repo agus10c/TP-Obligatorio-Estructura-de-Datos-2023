@@ -1,5 +1,5 @@
-[2026-06-08T05:21:21.530584600] Se realizo carga del archivo carga.txt. Se cargaron: 30 Ciudades, 20 Solicitudes, 40 Rutas, 20 Clientes.
-[2026-06-08T05:21:21.558999] 
+[2026-06-10T13:53:54.578389] Se realizo carga del archivo carga.txt. Se cargaron: 30 Ciudades, 20 Solicitudes, 40 Rutas, 20 Clientes.
+[2026-06-10T13:53:54.620402400] 
  ===== ESTADO DEL SISTEMA ===== 
 
  ---- HASHMAP CLIENTES ---- 
@@ -154,17 +154,17 @@ Vertice: 5800 -> [5152 (Etiqueta: 220.0)] [5500 (Etiqueta: 500.0)] [5700 (Etique
 Vertice: 5700 -> [5400 (Etiqueta: 130.0)] [5800 (Etiqueta: 140.0)] 
 Vertice: 5400 -> [5500 (Etiqueta: 170.0)] [5700 (Etiqueta: 130.0)] 
 Vertice: 4200 -> [4000 (Etiqueta: 150.0)] [4400 (Etiqueta: 200.0)] [5300 (Etiqueta: 450.0)] 
-Vertice: 4000 -> [2000 (Etiqueta: 300.0)] [3100 (Etiqueta: 300.0)] [4200 (Etiqueta: 150.0)] 
+Vertice: 4000 -> [3100 (Etiqueta: 300.0)] [4200 (Etiqueta: 150.0)] 
 Vertice: 3100 -> [3000 (Etiqueta: 50.0)] [4000 (Etiqueta: 300.0)] 
-Vertice: 3000 -> [1000 (Etiqueta: 480.0)] [2000 (Etiqueta: 170.0)] [3100 (Etiqueta: 50.0)] [3400 (Etiqueta: 500.0)] [6300 (Etiqueta: 700.0)] 
-Vertice: 2000 -> [1000 (Etiqueta: 60.0)] [1900 (Etiqueta: 320.0)] [4000 (Etiqueta: 300.0)] [3000 (Etiqueta: 170.0)] 
+Vertice: 3000 -> [1000 (Etiqueta: 480.0)] [3300 (Etiqueta: 300.0)] [2000 (Etiqueta: 170.0)] [3100 (Etiqueta: 50.0)] [3400 (Etiqueta: 500.0)] [6300 (Etiqueta: 700.0)] 
+Vertice: 2000 -> [1000 (Etiqueta: 60.0)] [1900 (Etiqueta: 320.0)] [3000 (Etiqueta: 170.0)] 
 Vertice: 6300 -> [3000 (Etiqueta: 700.0)] [5000 (Etiqueta: 600.0)] [9000 (Etiqueta: 1200.0)] [9400 (Etiqueta: 1500.0)] 
 Vertice: 4400 -> [4200 (Etiqueta: 200.0)] [4600 (Etiqueta: 350.0)] 
 Vertice: 8324 -> [5000 (Etiqueta: 1110.0)] [8300 (Etiqueta: 12.0)] [8332 (Etiqueta: 20.0)] 
 Vertice: 8332 -> [8322 (Etiqueta: 10.0)] [8324 (Etiqueta: 20.0)] 
 Vertice: 8322 -> [8300 (Etiqueta: 15.0)] [8332 (Etiqueta: 10.0)] 
 Vertice: 8300 -> [5000 (Etiqueta: 1100.0)] [8322 (Etiqueta: 15.0)] [8324 (Etiqueta: 12.0)] 
-Vertice: 3300 -> [3500 (Etiqueta: 400.0)] [3400 (Etiqueta: 300.0)] 
+Vertice: 3300 -> [3000 (Etiqueta: 300.0)] [3500 (Etiqueta: 400.0)] [3400 (Etiqueta: 300.0)] 
 Vertice: 5500 -> [5300 (Etiqueta: 300.0)] [5400 (Etiqueta: 170.0)] [5000 (Etiqueta: 650.0)] [5800 (Etiqueta: 500.0)] 
 Vertice: 5300 -> [4700 (Etiqueta: 280.0)] [4200 (Etiqueta: 450.0)] [5500 (Etiqueta: 300.0)] 
 Vertice: 3600 -> [3500 (Etiqueta: 250.0)] [4600 (Etiqueta: 300.0)] 

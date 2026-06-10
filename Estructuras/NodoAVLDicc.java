@@ -2,13 +2,13 @@
 package Estructuras;
 
 public class NodoAVLDicc {
-    private Object clave;
+    private Comparable clave; 
     private Object elemento;
     private int altura;
     private NodoAVLDicc izquierdo;
     private NodoAVLDicc derecho;
 
-    public NodoAVLDicc(Object clave, Object elemento, NodoAVLDicc izq, NodoAVLDicc der){
+    public NodoAVLDicc(Comparable clave, Object elemento, NodoAVLDicc izq, NodoAVLDicc der){
         this.clave = clave;
         this.elemento = elemento;
         this.izquierdo = izq;
@@ -16,11 +16,11 @@ public class NodoAVLDicc {
         this.altura = 0;
     }
 
-    public Object getClave(){
+    public Comparable getClave(){
         return clave;
     }
     
-    public void setClave(Object cl){
+    public void setClave(Comparable cl){
         this.clave = cl;
     }
 

@@ -355,6 +355,26 @@ public class Lista {
         }
         
     }
+    
+    public void copiarLista(Lista lis) {
+        //Copia el contenito a la lista ingresada por parametro
+       lis.cabecera = copiarListaAux(this.cabecera); 
+       lis.longitud = this.longitud;
+    }
+    
+    private Nodo copiarListaAux(Nodo nodo) {
+        //Copia el contenito de la lista lis
+        Nodo nuevo;
+        
+        nuevo = new Nodo(nodo.getElemento(), null);
+        
+        if (nodo.getEnlace() != null) {
+            nuevo.setEnlace(copiarListaAux(nodo.getEnlace()));
+        }
+        
+        return nuevo;
+        
+    }
 
     public String toString() {
         

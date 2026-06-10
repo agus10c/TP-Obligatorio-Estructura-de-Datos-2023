@@ -6,7 +6,8 @@ public class MapeoAMuchos {
 
     /* Decidi utilizar una estructura mapeoAMuchos implementada con tabla Hash donde los dominios seran strings con la combinacion 
     de los codigos postales de la ciudad de origen y la ciudad de destino(Ej : 8300-5000) y el rango es una Lista con las solicitudes correspomdientes.
-    Esto porque el acceso al hashmap(O(1)) es eficiente para la búsqueda de todas las solicitudes entre dos ciudades. */
+    Esto porque el acceso al hashmap(O(1)) es eficiente para la búsqueda de todas las solicitudes entre dos ciudades.
+    Ademas agregue metodos propios de las solicitudes*/
     private NodoHashMapeoM[] tabla;
     private static final int TAM = 60;
     private int cant = 0;

@@ -505,7 +505,7 @@ public class GrafoEtiquetado {
             }
 
             if (nOrigen != null && nDestino != null) {
-                caminoMasCortoAux(nOrigen, nDestino, new Lista(), new Lista(), caminoMasCorto);
+                caminoMasCortoAux(nOrigen, nDestino, new Lista(), caminoMasCorto);
             }
 
         }
@@ -513,22 +513,20 @@ public class GrafoEtiquetado {
         return caminoMasCorto;
     }
 
-    private void caminoMasCortoAux(NodoVert n, NodoVert destino, Lista visitados, Lista caminoActual, Lista caminoMasCorto) {
+    private void caminoMasCortoAux(NodoVert n, NodoVert destino, Lista caminoActual, Lista caminoMasCorto) {
 
-        if (n != null) {
-            caminoActual.insertar(n.getElem(), caminoActual.longitud() + 1);
+        if (!(caminoMasCorto.longitud() > 0 && caminoActual.longitud() >= caminoMasCorto.longitud())) {
+            // si el camino mas corto tiene una longitud mayor a 0 y el camino actual todavia no es mayor
 
-            if (!(caminoMasCorto.longitud() > 0 && caminoActual.longitud() >= caminoMasCorto.longitud())) {
-                // si n no es nulo y el camino mas corto tiene una longitud mayor a 0 y el camino actual todavia no es mayor
+            if (n != null) {
+
+                int pos = caminoActual.longitud() + 1;
+                caminoActual.insertar(n.getElem(), pos);
+
                 if (n == destino) {
-
-                    if (caminoMasCorto.esVacia() || caminoActual.longitud() < caminoMasCorto.longitud()) {
-                        copiarLista(caminoActual, caminoMasCorto);
-                    }
+                    caminoActual.copiarLista(caminoMasCorto);
 
                 } else {
-                    int pos = visitados.longitud() + 1;
-                    visitados.insertar(n.getElem(), pos);
 
                     NodoAdy ady = n.getPrimerAdy();
 
@@ -536,37 +534,25 @@ public class GrafoEtiquetado {
 
                         NodoVert v = ady.getVertice();
 
-                        if (visitados.localizar(v.getElem()) < 0) {
+                        if (caminoActual.localizar(v.getElem()) < 0) {
 
-                            caminoMasCortoAux(v, destino, visitados, caminoActual, caminoMasCorto);
+                            caminoMasCortoAux(v, destino, caminoActual, caminoMasCorto);
                         }
 
                         ady = ady.getSigAdy();
                     }
 
-                    visitados.eliminar(pos);
                 }
+
+                caminoActual.eliminar(pos);
             }
 
-            caminoActual.eliminar(caminoActual.longitud());
         }
     }
 
-    private void copiarLista(Lista origen, Lista destino) {
-
-        destino.vaciar();
-
-        for (int i = 1; i <= origen.longitud(); i++) {
-
-            destino.insertar(origen.recuperar(i), destino.longitud() + 1);
-
-        }
-
-    }
-
-    public Double recorridoMin(Object origen, Object destino) {
-
-        double r = -1;
+    public boolean verificarCaminoConDistanciaMenorA(Object origen, Object destino, double distancia) {
+        //verifica si existe un camino cuya distancia sea menor a la ingresada
+        boolean existe = false;
 
         if (!origen.equals(destino)) {
 
@@ -588,60 +574,53 @@ public class GrafoEtiquetado {
             }
 
             if (nOrigen != null && nDestino != null) {
-                r = recorridoMinAux(nOrigen, destino, new Lista(), 0);
+
+                existe = verificarCaminoConDistanciaMenorAAux(nOrigen, nDestino, new Lista(), 0, distancia);
             }
 
         }
 
-        return r;
+        return existe;
 
     }
 
-    private double recorridoMinAux(NodoVert n, Object destino, Lista visitados, double distancia) {
+    private boolean verificarCaminoConDistanciaMenorAAux(NodoVert n, NodoVert destino, Lista visitados, double distancia, double distanciaLimite) {
 
-        double distanciaMin = -1;
+        boolean existe = false;
+        if (distancia < distanciaLimite) {
+            if (n != null) {
 
-        if (n != null) {
+                if (n == destino) {
+                    existe = true;
+                } else {
 
-            if (n.getElem().equals(destino)) {
+                    int pos = visitados.longitud() + 1;
+                    visitados.insertar(n.getElem(), pos);
+                    NodoAdy ady = n.getPrimerAdy();
 
-                distanciaMin = distancia;
+                    while (ady != null && !existe) {
 
-            } else {
+                        NodoVert v = ady.getVertice();
 
-                int pos = visitados.longitud() + 1;
-                visitados.insertar(n.getElem(), pos);
-                NodoAdy ady = n.getPrimerAdy();
+                        if (visitados.localizar(v.getElem()) < 0) {
 
-                while (ady != null) {
-
-                    NodoVert v = ady.getVertice();
-
-                    if (visitados.localizar(v.getElem()) < 0) {
-
-                        double dist = recorridoMinAux(v, destino, visitados, distancia + ady.getEtiqueta());
-
-                        if (dist >= 0) {
-
-                            if (distanciaMin < 0 || dist < distanciaMin) {
-                                distanciaMin = dist;
-                            }
+                            existe = verificarCaminoConDistanciaMenorAAux(v, destino, visitados, distancia + ady.getEtiqueta(), distanciaLimite);
 
                         }
 
+                        ady = ady.getSigAdy();
+
                     }
 
-                    ady = ady.getSigAdy();
+                    visitados.eliminar(pos);
 
                 }
 
-                visitados.eliminar(pos);
-
             }
-
+            
         }
-
-        return distanciaMin;
+        
+        return existe;
 
     }
 
@@ -652,7 +631,7 @@ public class GrafoEtiquetado {
 
         Lista caminos = new Lista();
 
-        if (!origen.equals(destino)) {
+        if (!origen.equals(destino) && !origen.equals(intermedio) && !intermedio.equals(destino)) { //verifico que no sean iguales los objetos ingresados
 
             NodoVert nOrigen, nDestino, nIntermedio, aux;
             nOrigen = null;
@@ -679,9 +658,7 @@ public class GrafoEtiquetado {
             }
 
             if (nOrigen != null && nDestino != null && nIntermedio != null) {
-
-                obtenerCaminosConIntermedioAux(nOrigen, nIntermedio, nDestino, caminos, new Lista(), new Lista(), false);
-
+                obtenerCaminosConIntermedioAux(nOrigen, nIntermedio, nDestino, caminos, new Lista(), false);
             }
 
         }
@@ -690,17 +667,13 @@ public class GrafoEtiquetado {
 
     }
 
-    private void obtenerCaminosConIntermedioAux(NodoVert n, NodoVert intermedio, NodoVert destino, Lista caminos, Lista camino, Lista visitados, boolean paso) {
+    private void obtenerCaminosConIntermedioAux(NodoVert n, NodoVert intermedio, NodoVert destino, Lista caminos, Lista camino, boolean paso) {
         //camino: es el camino actual que estoy recorriendo de manera recursiva
         //caminos son todos los caminos que van desde el origen al destino pasando por el vertice intermedio sin repetir vertices
         //paso es un booleano que tiene valor true si se paso por el nodo intermedio
         if (n != null) {
 
-            int posCamino = camino.longitud() + 1;
-            int posVisitados = visitados.longitud() + 1;
-
-            camino.insertar(n.getElem(), posCamino);
-            visitados.insertar(n.getElem(), posVisitados);
+            int pos = camino.longitud() + 1;
 
             if (n == intermedio) {
                 paso = true;
@@ -708,7 +681,7 @@ public class GrafoEtiquetado {
 
             if (n == destino) {
                 if (paso) {
-                    caminos.insertar(camino.clone(), caminos.longitud() + 1);
+                    caminos.insertar(camino.clone(), pos);
                 }
             } else {
 
@@ -718,8 +691,8 @@ public class GrafoEtiquetado {
 
                     NodoVert v = ady.getVertice();
 
-                    if (visitados.localizar(v.getElem()) < 0) {
-                        obtenerCaminosConIntermedioAux(v, intermedio, destino, caminos, camino, visitados, paso);
+                    if (camino.localizar(v.getElem()) < 0) {
+                        obtenerCaminosConIntermedioAux(v, intermedio, destino, caminos, camino, paso);
                     }
 
                     ady = ady.getSigAdy();
@@ -728,8 +701,7 @@ public class GrafoEtiquetado {
 
             }
 
-            camino.eliminar(posCamino);
-            visitados.eliminar(posVisitados);
+            camino.eliminar(pos);
 
         }
 
@@ -764,7 +736,7 @@ public class GrafoEtiquetado {
                 boolean encontrado = false;
 
                 while (ady != null && !encontrado) {
-                    
+
                     NodoVert v = ady.getVertice();
                     if (v.getElem().equals(elem)) {
 
@@ -816,7 +788,7 @@ public class GrafoEtiquetado {
             }
 
             if (nOrigen != null && nDestino != null) {
-                caminoConMenorDistanciaAux(nOrigen, destino, new Lista(), 0, -1, new Lista(), caminoMasCorto);
+                caminoConMenorDistanciaAux(nOrigen, destino, 0, -1, new Lista(), caminoMasCorto);
             }
 
         }
@@ -825,32 +797,32 @@ public class GrafoEtiquetado {
 
     }
 
-    private double caminoConMenorDistanciaAux(NodoVert n, Object destino, Lista visitados, double distancia, double distanciaMin, Lista caminoActual, Lista caminoMasCorto) {
+    private double caminoConMenorDistanciaAux(NodoVert n, Object destino, double distancia, double distanciaMin, Lista caminoActual, Lista caminoMasCorto) {
 
         if (!(distanciaMin >= 0 && distancia >= distanciaMin)) {
 
             if (n != null) {
 
-                caminoActual.insertar(n.getElem(), caminoActual.longitud() + 1);
+                int pos = caminoActual.longitud() + 1;
+                caminoActual.insertar(n.getElem(), pos);
 
                 if (n.getElem().equals(destino)) {
 
                     if (distanciaMin < 0 || distancia < distanciaMin) {
                         distanciaMin = distancia;
-                        copiarLista(caminoActual, caminoMasCorto);
+                        caminoActual.copiarLista(caminoMasCorto);
                     }
 
                 } else {
-                    int pos = visitados.longitud() + 1;
-                    visitados.insertar(n.getElem(), pos);
+
                     NodoAdy ady = n.getPrimerAdy();
 
                     while (ady != null) {
 
                         NodoVert v = ady.getVertice();
-                        if (visitados.localizar(v.getElem()) < 0) {
+                        if (caminoActual.localizar(v.getElem()) < 0) {
 
-                            double dist = caminoConMenorDistanciaAux(v, destino, visitados, distancia + ady.getEtiqueta(), distanciaMin, caminoActual, caminoMasCorto);
+                            double dist = caminoConMenorDistanciaAux(v, destino, distancia + ady.getEtiqueta(), distanciaMin, caminoActual, caminoMasCorto);
 
                             if (dist >= 0) {
 
@@ -866,11 +838,8 @@ public class GrafoEtiquetado {
 
                     }
 
-                    visitados.eliminar(pos);
-
                 }
-
-                caminoActual.eliminar(caminoActual.longitud());
+                caminoActual.eliminar(pos);
 
             }
         }
